@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.dto;public record GeneralDto(String name, boolean isActive) {}

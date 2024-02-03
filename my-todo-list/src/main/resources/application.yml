@@ -1,0 +1,12 @@
+server:
+  port: 8090
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo_db
+    username: postgres
+    password: postgres

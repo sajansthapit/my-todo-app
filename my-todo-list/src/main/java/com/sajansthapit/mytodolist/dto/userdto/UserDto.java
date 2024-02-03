@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.dto.userdto;public record UserDto (String fullName, String email, String password) {}

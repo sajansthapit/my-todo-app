@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.service;import com.sajansthapit.mytodolist.service.general.IGeneralService;public interface ICategoryService extends IGeneralService {}
