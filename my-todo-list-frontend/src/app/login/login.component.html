@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <p-card>
+    <span class="display-6">Welcome to My-To-Do</span>
+    <div class="row mt-4">
+      <div class="col-md-6 offset-md-3">
+        <p-card class="col-md-6 offset-md-3" subheader="Begin By Login">
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div>
+              Email:
+              <span class="p-input-icon-left mt-1">
+                <i class="pi pi-user"></i>
+                <input type="text" pInputText formControlName="email" />
+              </span>
+            </div>
+            <div class="mt-4">
+              Password:
+              <span class="p-input-icon-left mt-1">
+                <i class="pi pi-key"></i>
+                <input type="password" pInputText formControlName="password" />
+              </span>
+            </div>
+            <div class="mt-4">
+              <p-button type="submit" label="Login"></p-button>
+            </div>
+          </form>
+        </p-card>
+      </div>
+    </div>
+  </p-card>
+</div>
