@@ -5,7 +5,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../auth/auth.service';
-import { LoginDto } from '../auth/dto/LoginDto';
+import { LoginRequestDto } from '../auth/dto/login.request.dto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,7 @@ import { LoginDto } from '../auth/dto/LoginDto';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   loginForm = new FormGroup({
     email: new FormControl(''),
@@ -30,16 +31,18 @@ export class LoginComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
 
   login(): void {
-    let loginDto: LoginDto = {
+    let loginDto: LoginRequestDto = {
       email: this.loginForm.value.email?.toString(),
       password: this.loginForm.value.password?.toString(),
     };
-    this.authService.login(loginDto).subscribe((res) => {
-      console.log(res);
+    this.authService.login(loginDto).subscribe({
+      next: (res) => {
+        this.router.navigate(['dashboard']);
+      },
     });
   }
 }

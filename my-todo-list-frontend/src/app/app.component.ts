@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PrimeNGConfig } from 'primeng/api';
-import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  constructor(private primengConfig: PrimeNGConfig) {}
+  title = 'my-todo-list-frontend';
+
+  constructor(
+   ) {}
 
   ngOnInit(): void {
-    this.primengConfig.ripple = true;
   }
-  title = 'my-todo-list-frontend';
 }
