@@ -1,30 +1,53 @@
-<div class="container mt-5">
-  <p-card>
-    <span class="display-6">Welcome to My-To-Do</span>
-    <div class="row mt-4">
-      <div class="col-md-6 offset-md-3">
-        <p-card class="col-md-6 offset-md-3" subheader="Begin By Login">
-          <form [formGroup]="loginForm" (ngSubmit)="login()">
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card text-black" style="border-radius: 3rem">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class=" mb-2 text-uppercase">DON'T FORGET TO-DO</h2>
+              <p class="text-black-50 mb-5">
+                Please enter your email and password!
+              </p>
+              <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div>
+                  Email <br />
+                  <span class="p-input-icon-left mt-2">
+                    <i class="pi pi-user"></i>
+                    <input type="email" pInputText formControlName="email" />
+                  </span>
+                </div>
+                <div class="mt-4">
+                  Password <br />
+                  <span class="p-input-icon-left mt-2">
+                    <i class="pi pi-key"></i>
+                    <input
+                      type="password"
+                      pInputText
+                      formControlName="password"
+                    />
+                  </span>
+                </div>
+                <p class="small mb-5 pb-lg-2 mt-5">
+                  <a class="text-black-50" href="#!">Forgot password?</a>
+                </p>
+
+                <button pButton class="btn btn-outline-dark btn-lg px-5" type="submit">
+                  Login
+                </button>
+              </form>
+
+            </div>
+
             <div>
-              Email <br />
-              <span class="p-input-icon-left mt-1">
-                <i class="pi pi-user"></i>
-                <input type="text" pInputText formControlName="email" />
-              </span>
+              <p class="mb-0">
+                Don't have an account?
+                <a href="#!" class="text-black-50 fw-bold">Sign Up</a>
+              </p>
             </div>
-            <div class="mt-4">
-              Password <br />
-              <span class="p-input-icon-left mt-1">
-                <i class="pi pi-key"></i>
-                <input type="password" pInputText formControlName="password" />
-              </span>
-            </div>
-            <div class="mt-4">
-              <p-button type="submit" label="Login"></p-button>
-            </div>
-          </form>
-        </p-card>
+          </div>
+        </div>
       </div>
     </div>
-  </p-card>
-</div>
+  </div>
+</section>

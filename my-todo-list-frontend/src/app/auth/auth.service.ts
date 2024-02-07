@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoginRequestDto } from './dto/login.request.dto';
 import { LoginResponseDto } from './dto/login.response.dto';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -37,7 +37,7 @@ export class AuthService {
   public checkLogin(): boolean {
     const token = localStorage.getItem('access_token');
     if (!token) return false;
-    const expiry = JSON.parse(atob(token?.split('.')[1] as string)).exp;
+    const expiry = JSON.parse(atob(token?.split('.')[1])).exp;
     return Math.floor(new Date().getTime() / 1000) < expiry;
   }
 }
