@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.dto;public record BaseResponse(String message) {}
