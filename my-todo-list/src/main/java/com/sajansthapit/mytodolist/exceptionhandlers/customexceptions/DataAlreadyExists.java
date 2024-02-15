@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.exceptionhandlers.customexceptions;public class DataAlreadyExists extends RuntimeException{    public DataAlreadyExists(String message) {        super(message);    }}

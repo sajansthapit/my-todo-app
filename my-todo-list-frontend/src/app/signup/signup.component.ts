@@ -1,5 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -27,6 +31,7 @@ import { PasswordStrengthComponent } from '../shared/password-strength/password-
 export class SignupComponent implements OnInit {
   validPassword: boolean = false;
   isPasswordMatched: boolean = false;
+  visible: boolean = false;
 
   signupForm = new FormGroup({
     fullName: new FormControl('', [Validators.required]),

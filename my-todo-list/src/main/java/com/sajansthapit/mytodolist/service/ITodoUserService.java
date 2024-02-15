@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.service;import com.sajansthapit.mytodolist.dto.userdto.UserDto;import com.sajansthapit.mytodolist.models.TodoUser;public interface ITodoUserService {    /**     * Method to save user to db     * @param userDto: UserDto     * @return TodoUser     */    TodoUser save(UserDto userDto);}

@@ -99,10 +99,7 @@
                   @if(signupForm.get('reTypePassword')?.invalid &&
                   signupForm.get('reTypePassword')?.dirty ||
                   signupForm.get('reTypePassword')?.touched){
-                  <div
-                    class="error"
-                    *ngIf="!isPasswordMatched"
-                  >
+                  <div class="error" *ngIf="!isPasswordMatched">
                     Password doesn't match
                   </div>
                   }
