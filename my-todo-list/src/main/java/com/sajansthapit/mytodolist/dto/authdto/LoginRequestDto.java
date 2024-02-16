@@ -1,1 +1,0 @@
-package com.sajansthapit.mytodolist.dto.authdto;public record LoginRequestDto(String email, String password) {}

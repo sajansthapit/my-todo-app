@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  public register(userDto: UserDto): Observable<BaseResponse> {
-    return this.http.post(this.API_URL.concat('/register'), userDto);
+  public register(todoUserDto: UserDto): Observable<BaseResponse> {
+    return this.http.post(this.API_URL.concat('/register'), todoUserDto);
   }
 }

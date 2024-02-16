@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.app.category.repository;import com.sajansthapit.mytodolist.app.category.models.TodoUserCategory;import org.springframework.data.jpa.repository.JpaRepository;import org.springframework.stereotype.Repository;@Repositorypublic interface TodoUserCategoryRepository extends JpaRepository<TodoUserCategory, String> {}

@@ -1,0 +1,1 @@
+package com.sajansthapit.mytodolist.auth.dto.authdto;public record LoginSuccessDto(String accessToken, String refreshToken) {}

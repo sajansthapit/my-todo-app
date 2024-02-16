@@ -1,1 +1,0 @@
-package com.sajansthapit.mytodolist.repository;import com.sajansthapit.mytodolist.models.Category;import org.springframework.data.jpa.repository.JpaRepository;import org.springframework.stereotype.Repository;@Repositorypublic interface CategoryRepository extends JpaRepository<Category, String> {}
