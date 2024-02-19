@@ -7,22 +7,24 @@ import {
 import {
   FormControl,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
 import { PasswordStrengthComponent } from '../shared/password-strength/password-strength.component';
+import {MatInputModule} from '@angular/material/input'
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
   imports: [
     CommonModule,
-    ButtonModule,
-    InputTextModule,
     ReactiveFormsModule,
     PasswordStrengthComponent,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule
   ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',

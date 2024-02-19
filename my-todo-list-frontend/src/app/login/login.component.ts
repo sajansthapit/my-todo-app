@@ -1,8 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { CardModule } from 'primeng/card';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../auth/auth.service';
 import { LoginRequestDto } from '../auth/dto/login.request.dto';
@@ -13,9 +10,6 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [
     CommonModule,
-    CardModule,
-    InputTextModule,
-    ButtonModule,
     ReactiveFormsModule,
   ],
   templateUrl: './login.component.html',

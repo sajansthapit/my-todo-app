@@ -1,118 +1,119 @@
-<section class="vh-100 gradient-custom">
+<section class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div
-          class="card text-black border border-primary rounded-5 border-opacity-50 shadow-sm"
-        >
-          <div class="card-body p-5 text-center">
+      <div class="col-12 col-sx-6 col-sm-12 col-md-10 col-lg-7 col-xl-6">
+        <div class="text-white custom-box">
+          <div class="p-5 text-center">
             <div class="mb-md-5 mt-md-4 pb-5">
               <h2 class="mb-2 text-uppercase">START YOUR TO-DO</h2>
-              <p class="text-black-50 mb-5">
+              <p class="text-white-50 mb-5">
                 Please fill the form to complete your regestration!
               </p>
 
-              <form [formGroup]="signupForm" (ngSubmit)="signup()">
-                <div class="mt-4">
-                  Full Name <br />
-                  <span class="p-input-icon-left mt-2">
-                    <i class="pi pi-user"></i>
-                    <input
-                      type="fullName"
-                      pInputText
-                      formControlName="fullName"
-                    />
-                  </span>
-                  @if(signupForm.get('fullName')?.invalid &&
-                  signupForm.get('fullName')?.dirty ||
-                  signupForm.get('fullName')?.touched){
-                  <div
-                    class="error"
-                    *ngIf="signupForm.get('fullName')?.errors?.['required']"
-                  >
-                    Full name is required
-                  </div>
-                  }
-                </div>
-                <div class="mt-4">
-                  Email <br />
-                  <span class="p-input-icon-left mt-2">
-                    <i class="pi pi-at"></i>
-                    <input type="email" pInputText formControlName="email" />
-                  </span>
-                  @if(signupForm.get('email')?.invalid &&
-                  signupForm.get('email')?.dirty ||
-                  signupForm.get('email')?.touched){
-                  <div
-                    class="error"
-                    *ngIf="signupForm.get('email')?.errors?.['required']"
-                  >
-                    Email is required
-                  </div>
-                  <div
-                    class="error"
-                    *ngIf="signupForm.get('email')?.errors?.['email']"
-                  >
-                    Please provide a valid email
-                  </div>
-                  }
-                </div>
-                <div class="mt-4">
-                  Password <br />
-                  <span class="p-input-icon-left mt-2">
-                    <i class="pi pi-key"></i>
-                    <input
-                      type="password"
-                      pInputText
-                      formControlName="password"
-                    />
-                  </span>
-                  @if(signupForm.get('password')?.invalid &&
-                  signupForm.get('password')?.dirty ||
-                  signupForm.get('password')?.touched){
-                  <div
-                    class="error"
-                    *ngIf="signupForm.get('password')?.errors?.['required']"
-                  >
-                    Password is required
-                  </div>
-                  <div class="error" *ngIf="!validPassword">
-                    Please use strong password
-                  </div>
-                  } @if (signupForm.value.password) {
-                  <app-password-strength
-                    [passwordToCheck]="signupForm.value.password"
-                    (passwordStrength)="isPasswordValid($event)"
-                  ></app-password-strength>
-                  }
-                </div>
-                <div class="mt-4">
-                  Retype Password <br />
-                  <span class="p-input-icon-left mt-2">
-                    <i class="pi pi-key"></i>
-                    <input
-                      type="password"
-                      pInputText
-                      formControlName="reTypePassword"
-                    />
-                  </span>
-                  @if(signupForm.get('reTypePassword')?.invalid &&
-                  signupForm.get('reTypePassword')?.dirty ||
-                  signupForm.get('reTypePassword')?.touched){
-                  <div class="error" *ngIf="!isPasswordMatched">
-                    Password doesn't match
-                  </div>
-                  }
-                </div>
-
-                <button
-                  pButton
-                  class="btn btn-outline-primary btn-lg px-5 mt-5"
-                  type="submit"
+              <div class="row d-flex justify-content-center">
+                <form
+                  class="col-9"
+                  [formGroup]="signupForm"
+                  (ngSubmit)="signup()"
                 >
-                  Sign up
-                </button>
-              </form>
+                  <div class="mt-4">
+                    Full Name
+                    <div class="mt-2">
+                      <input
+                        class="custom-input"
+                        type="fullName"
+                        matInput
+                        formControlName="fullName"
+                      />
+                    </div>
+                    @if(signupForm.get('fullName')?.invalid &&
+                    signupForm.get('fullName')?.dirty ||
+                    signupForm.get('fullName')?.touched){
+                    <div
+                      class="error"
+                      *ngIf="signupForm.get('fullName')?.errors?.['required']"
+                    >
+                      Full name is required
+                    </div>
+                    }
+                  </div>
+                  <div class="mt-4">
+                    Email
+                    <div class="mt-2">
+                      <input
+                        type="email"
+                        class="custom-input"
+                        formControlName="email"
+                      />
+                    </div>
+                    @if(signupForm.get('email')?.invalid &&
+                    signupForm.get('email')?.dirty ||
+                    signupForm.get('email')?.touched){
+                    <div
+                      class="error"
+                      *ngIf="signupForm.get('email')?.errors?.['required']"
+                    >
+                      Email is required
+                    </div>
+                    <div
+                      class="error"
+                      *ngIf="signupForm.get('email')?.errors?.['email']"
+                    >
+                      Please provide a valid email
+                    </div>
+                    }
+                  </div>
+                  <div class="mt-4">
+                    Password
+                    <div class="mt-2">
+                      <input
+                        class="custom-input"
+                        type="password"
+                        formControlName="password"
+                      />
+                    </div>
+                    @if(signupForm.get('password')?.invalid &&
+                    signupForm.get('password')?.dirty ||
+                    signupForm.get('password')?.touched){
+                    <div
+                      class="error"
+                      *ngIf="signupForm.get('password')?.errors?.['required']"
+                    >
+                      Password is required
+                    </div>
+                    <div class="error" *ngIf="!validPassword">
+                      Please use strong password
+                    </div>
+                    } @if (signupForm.value.password) {
+                    <app-password-strength
+                      [passwordToCheck]="signupForm.value.password"
+                      (passwordStrength)="isPasswordValid($event)"
+                    ></app-password-strength>
+                    }
+                  </div>
+                  <div class="mt-4">
+                    Retype Password
+                    <div class="mt-2">
+                      <input
+                        type="password"
+                        class="custom-input"
+                        formControlName="reTypePassword"
+                      />
+                    </div>
+                    @if(signupForm.get('reTypePassword')?.invalid &&
+                    signupForm.get('reTypePassword')?.dirty ||
+                    signupForm.get('reTypePassword')?.touched){
+                    <div class="error" *ngIf="!isPasswordMatched">
+                      Password doesn't match
+                    </div>
+                    }
+                  </div>
+
+                  <button class="custom-button mt-5" type="submit">
+                    Sign up
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

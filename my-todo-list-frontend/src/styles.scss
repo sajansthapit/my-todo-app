@@ -1,9 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
-@import "primeicons/primeicons.css";
 
-.error{
-  font-size: 14px;
-  margin-top: 5px;
-  color: #f94f25;
-  opacity: 0.8;
+
+
+html,
+body {
+  height: 100%;
 }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: rgb(0, 41, 41);
+  background: linear-gradient(
+    60deg,
+    rgba(0, 41, 41, 1) 0%,
+    rgba(1, 83, 93, 1) 22%,
+    rgba(2, 106, 122, 1) 38%,
+    rgba(3, 123, 143, 1) 65%,
+    rgba(4, 145, 171, 1) 85%,
+    rgba(4, 163, 195, 1) 100%
+  );
+}
+
+.error {
+  font-size: 15px;
+  margin-top: 5px;
+  color: #f6a4a4;
+  // opacity: 0.8;
+}
+
+.custom-box {
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 5) 2px 4px 20px 2px;
+}
+
+.custom-input{
+  box-shadow: rgba(0, 0, 0, 5) 0px 2px 5px 0px inset;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+}
+
+.custom-button{
+  background: #026a7a;
+  box-shadow: rgba(0, 0, 0, 3) 0px 2px 4px 0px;
+  padding: 8px;
+  width: 100%;
+  color: #fff;
+  outline: 1px solid black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
