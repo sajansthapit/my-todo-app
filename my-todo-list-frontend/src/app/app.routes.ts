@@ -3,7 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { canActivate } from './auth/guard/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './auth/components/signup/signup.component';
 
 export const routes: Routes = [
   {

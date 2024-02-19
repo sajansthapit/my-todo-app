@@ -1,17 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '../auth/auth.service';
-import { LoginRequestDto } from '../auth/dto/login.request.dto';
+import { AuthService } from '../../auth.service';
+import { LoginRequestDto } from '../../dto/login.request.dto';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -38,9 +35,5 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['dashboard']);
       },
     });
-  }
-
-  openSignup(): void{
-    this.router.navigate(['signup'])
   }
 }

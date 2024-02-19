@@ -1,31 +1,17 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import {
   FormControl,
   FormGroup,
-  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { PasswordStrengthComponent } from '../shared/password-strength/password-strength.component';
-import {MatInputModule} from '@angular/material/input'
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { PasswordStrengthComponent } from '../../../shared/password-strength/password-strength.component';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    PasswordStrengthComponent,
-    MatInputModule,
-    FormsModule,
-    MatFormFieldModule
-  ],
+  imports: [CommonModule, ReactiveFormsModule, PasswordStrengthComponent],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
